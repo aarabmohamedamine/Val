@@ -1,0 +1,16 @@
+.personal-card{
+
+
+    background-color: rgba(103, 103, 162, 0.269);
+    padding : 10px 20px;
+    border-radius: 15px;
+    width : 60%;
+    margin : 0 auto
+
+}
+h2{
+
+
+    font-size: larger;
+}
+
