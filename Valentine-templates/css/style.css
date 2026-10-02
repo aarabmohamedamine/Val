@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(186, 18, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.783);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+button {
+  background-color: rgba(255, 0, 0, 0.607);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+#continue-btn {
+  background-color: rgba(255, 0, 0, 0.607);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px 15px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  
+
+
+
+}
+
+#unlock-screen {
+  display: none;
+}
+#memories-screen{
+  display: none;
+}
+.memories-container{
+  display:flex;
+  gap:20px;
+}
+.memory-card{
+  width:230px;
+
+  background-color: white;
+  border-radius: 15px;
+  
+
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding : 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  
+  
+}
+.memory-card:hover{
+  transform: translateY(-3px);
+}
+.memory-card img {
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+}

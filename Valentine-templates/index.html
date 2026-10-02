@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>V1</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="intro-screen" class="card-container">
+        <p>A little surprise for you</p>
+        <h1>Someone made this for you</h1>
+        <p>There is something special waiting for you</p>
+        <button id="open-btn">Open ❤️</button>
+      </section>
+      <section id="unlock-screen" class="card-container">
+        <h2>For Hanae ❤️</h2>
+        <p>Before we continued...</p>
+        <p>Enter the date our story started:</p>
+        <input id="date-input" type="text" placeholder="DD/MM/YYYY" />
+        <button id="unlock-btn">Unlock</button>
+        <p id="error-message"></p>
+      </section>
+      <section id="memories-screen">
+        <p>Chapter One · Our Memories</p>
+        <h2>Some moments deserve their own place ❤️</h2>
+        <div class="memories-container">
+          <div class="memory-card">
+            <img src="assets/image/1.jpeg" alt="Our first memory">
+            <h3>Our First Coffee</h3>
+            <p>Where everything started.</p>
+          </div>
+
+          <div class="memory-card">
+            <img src="assets/image/2.jpeg" alt="A special memory">
+            <h3>That Special Day</h3>
+            <p>One of those days I'll never forget.</p>
+          </div>
+
+          <div class="memory-card">
+            <img src="assets/image/3.jpeg" alt="Our favorite memory">
+            <h3>Our Favorite Memory</h3>
+            <p>A moment worth keeping forever.</p>
+          </div>
+        </div>
+        <button id="continue-btn">Continue ❤️</button>
+
+      </section>
+
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
