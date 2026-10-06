@@ -61,5 +61,6 @@ const CONFIG = {
         "Thank you for every laugh, every conversation, and every little moment we shared.",
 
     surpriseMessage:
-        "You are my favorite chapter. ❤️"
+        "You are my favorite chapter. ❤️",
+    music: "assets/music/sound1.mp3",
 };

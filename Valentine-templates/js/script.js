@@ -22,15 +22,20 @@ const dateQuestion = document.querySelector("#date-question");
 const finalTitle = document.querySelector("#final-title");
 const finalParagraph1 = document.querySelector("#final-paragraph1");
 const finalParagraph2 = document.querySelector("#final-paragraph2");
+const backgroundMusic = document.querySelector("#background-music");
+const musicButton = document.querySelector("#music-btn");
+
+backgroundMusic.src = CONFIG.music;
 
 openButton.addEventListener("click", function () {
+    backgroundMusic.play();
     showScreen(introScreen, unlockScreen, "flex");
 });
 
 unlockButton.addEventListener("click", function () {
   const userDate = dateInput.value;
   if (userDate === correctDate) {
-    showScreen(memoriesScreen, messagesScreen);
+    showScreen(unlockScreen, memoriesScreen);
   } else {
     errorMessage.textContent = "Wrong date. Try again";
   }
@@ -43,9 +48,35 @@ continueButton.addEventListener("click", function () {
 finalButton.addEventListener("click", function () {
     showScreen(messagesScreen, finalScreen);
 });
+function createHearts() {
+
+    for (let i = 0; i < 15; i++) {
+
+        const heart = document.createElement("span");
+
+        heart.classList.add("floating-heart");
+        heart.textContent = "❤️";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDelay = Math.random() * 0.5 + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function () {
+            heart.remove();
+        }, 3000);
+    }
+}
 
 surpriseButton.addEventListener("click", function () {
-  surpriseMessage.textContent = CONFIG.surpriseMessage;
+
+    surpriseMessage.textContent = CONFIG.surpriseMessage;
+
+    surpriseMessage.classList.remove("reveal");
+    void surpriseMessage.offsetWidth;
+    surpriseMessage.classList.add("reveal");
+    createHearts();
+
 });
 
 introSmallText.textContent = CONFIG.introSmallText;
@@ -119,3 +150,15 @@ function showScreen(currentScreen, nextScreen, displayType = "block") {
     void nextScreen.offsetWidth;
     nextScreen.classList.add("screen-enter");
 }
+
+musicButton.addEventListener("click", function () {
+
+    if (backgroundMusic.paused) {
+        backgroundMusic.play();
+        musicButton.textContent = "🎵";
+    } else {
+        backgroundMusic.pause();
+        musicButton.textContent = "🔇";
+    }
+
+});
