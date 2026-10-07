@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- أضف هذا بعد <header> -->
+<div class="exclusive-message">
+    <div class="locjn">
+        <i class="fas fa-lock"></i>
+    </div>
+    <h3>🎀هدية ليك بوحدك🎀</h3>
+    <p> حبيبتي <span class="loved-name" id="lovedName"></span>،</p>
+    <p>هذه الصفحة اعددتها خصيصا لك كهدية ، وكل كلمة فيها موجهة اليك</p>
+    
+</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine Day</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- خلفية متحركة -->
+    <div class="floating-hearts"></div>
+    <div class="sparkles"></div>
+    
+    <!-- الشريط العلوي -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-heart"></i>
+                <span>أول عيد حب معا</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#message">رسالتي</a>
+                <a href="#memories">ذكرياتنا</a>
+                <a href="#gift">هديتي</a>
+            </div>
+            <button class="music-btn" id="musicBtn">
+                <i class="fas fa-music"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- القسم الرئيسي -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate__animated animate__fadeInDown">
+                     <span class="heart-beat">❤️</span> عيد حب سعيد <span class="heart-beat"></span>
+                </h1>
+                <h2 class="typing-text" id="typingText"></h2>
+                <p class="hero-description">بمناسبة عيد الحب ، رأيت فرصة للتعبير عن حبي بواسطة هذه الهدية الرمزية ، مناسبة نتذكر كم نحن محظوظون بوجودنا معا</p>
+                
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="openLetterBtn">
+                        <i class="fas fa-envelope-open-text"></i> افتح رسالتي
+                    </button>
+                    
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="heart-photo-frame">
+                    <div class="frame-decoration">
+                        <div class="decoration-circle"></div>
+                        <div class="decoration-circle"></div>
+                        <div class="decoration-circle"></div>
+                    </div>
+                    <img src="assets/images/media1.jpeg" 
+                         alt="قلب من الورود" class="main-photo">
+                    <div class="photo-overlay">
+                        <p>text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    
+    <!-- رسالة الحب -->
+    <section class="love-letter" id="message">
+        <div class="section-header">
+            <h2><i class="fas fa-heart-circle-check"></i> رسالة من القلب</h2>
+            <p>كلمات تعبر عن ما بداخلي</p>
+        </div>
+        
+        <div class="letter-container">
+            <div class="envelope" id="envelope">
+                <div class="envelope-front">
+                    <div class="stamp">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="to-label">
+                        <p> إلى : حبيبتي الغالية هناء❤️ </p>
+                    </div>
+                </div>
+                
+                <div class="letter" id="letterContent">
+                    <div class="letter-header">
+                        <div class="letter-date">14 فبراير 2026</div>
+                        <div class="letter-title">رسالتي الخاصة</div>
+                    </div>
+                    
+                    <div class="letter-body">
+                        <p>عزيزتي،</p>
+                        <p>في هذا اليوم الجميل، أود أن أعبر لك عن امتناني لحبك ووجودك في حياتي. شكراً لك على كل شيء، على كل ابتسامة، على كل دعم، وعلى كل لحظة جميلة قضيناها معاً.</p>
+                        <p>أنتِ النور الذي يضيء حياتي، والسعادة التي تملأ أيامي، والحب الذي يجعل قلبي ينبض. معكِ تعلمت معنى الحب الحقيقي، ومعنى الاهتمام، ومعنى أن يكون هناك شخص يهتم بك حقاً.</p>
+                        <p>أتمنى أن نبقى معاً للأبد، نشارك اللحظات الجميلة، ونتخطى الصعاب معاً. كل عام وأنتِ أغلى هدية في حياتي.</p>
+                        <p>أحبكِ أكثر مما تستطيعين الكلمات التعبير عنه.</p>
+                    </div>
+                    
+                    <div class="letter-footer">
+                        <div class="signature">مع كل حبي،<br>الحمق ديالك</div>
+                        <div class="seal">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="letter-instruction">
+                <p>اضغطي لفتح الرسالة يا حلوتي</p>
+                <i class="fas fa-hand-point-up"></i>
+            </div>
+        </div>
+        
+    </section>
+    
+    <!-- ذكرياتنا -->
+    <section class="memories" id="memories">
+        <div class="section-header">
+            <h2><i class="fas fa-images"></i> ذكرياتنا الجميلة</h2>
+            <p>لحظات لن ننساها أبدا!</p>
+        </div>
+        
+        <div class="memories-container">
+            <div class="memory-slider">
+                <div class="memory-card active">
+                    <div class="memory-image">
+                        <img src="assets/images/media2.jpeg" alt="ذكرى 1">
+                    </div>
+                    <div class="memory-content">
+                        <h3>أول لقاء</h3>
+                        <p>أول مقابلة دارت بيننا ، اليوم الذي تغيرت فيه حياتي للأبد.</p>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 03 مارس 2025
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image">
+                        <img src="assets/images/media3.jpeg" alt="ذكرى 2">
+                    </div>
+                    <div class="memory-content">
+                        <h3>أول هدية من الفتاة التي أعشق</h3>
+                        <p>أثمن ما حصلت عليه طوال حياتي</p>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> 23 ماي 2025
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="memory-card">
+                    <div class="memory-image">
+                        <img src="assets/images/media4.jpeg" alt="ذكرى 3">
+                    </div>
+                    <div class="memory-content">
+                        <h3>مشاعر</h3>
+                        <p>هنا أول كلمة أحبك ، وهنا بدأ كل الشيئ بالنسبة لنا❤️</p>
+                        <div class="memory-date">
+                            <i class="far fa-calendar"></i> الأول من شهر يوليو 2025
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- عداد الحب -->
+    <section class="love-counter">
+        <div class="counter-container">
+            <div class="counter-item">
+                <div class="counter-number" id="daysTogether">267</div>
+                <div class="counter-label">يوم معاً</div>
+            </div>
+            
+             <div class="counter-item">
+                <div class="counter-number infinite">∞</div>
+                <div class="counter-label">ذكرى جميلة</div>
+            </div>
+            <div class="counter-item">
+                <div class="counter-number infinite">∞</div>
+                <div class="counter-label">كم أحبكِ</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- هديتي لك -->
+    <section class="gift-section" id="gift">
+        <div class="section-header">
+            <h2><i class="fas fa-gift"></i> هديتي الخاصة</h2>
+            <p>شيء صغير يعبر عن حبي الكبير</p>
+        </div>
+        
+        <div class="gift-container">
+            <div class="gift-box" id="giftBox">
+                <div class="box-top">
+                    <div class="ribbon"></div>
+                    <div class="ribbon ribbon-2"></div>
+                </div>
+                <div class="box-body">
+                    <div class="gift-content">
+                        <i class="fas fa-heart gift-icon"></i>
+                        <h3>هدية عيد الحب</h3>
+                        <p class="gift-message">انقري لفتح الهدية</p>
+                    </div>
+                </div>
+                <div class="box-bottom"></div>
+            </div>
+            
+            <div class="gift-message-card" id="giftMessage">
+                <h3><i class="fas fa-star"></i> هديتي لكِ</h3>
+                <p>هديتي لكِ هي وعد بالحب الأبدي، والالتزام بالسعادة الدائمة، والعزم على جعل كل يوم من أيامنا معاً أجمل من الذي سبقه.</p>
+                <p>أعدكِ بأن أكون دائماً جانبكِ، أدعمكِ في أحلامكِ، وأشارككِ كل لحظات الفرح والحزن.</p>
+                <div class="virtual-gift">
+                    <i class="fas fa-heart-circle-check"></i>
+                    <p>احبك من من كل أعماق قلبي الخايبة ديالي ❤️</p>
+                </div>
+                <button class="btn-primary" id="closeGiftBtn">
+                    <i class="fas fa-heart"></i>شكرا يا مولاي
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- نهاية الصفحة -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-heart">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>عيد حب سعيد حبيبتي</h3>
+            <p>كل عام وأنتِ أغلى هدية في حياتي ❤️</p>
+            
+            <div class="footer-love">
+                <button class="love-btn" id="finalLoveBtn">
+                    <i class="fas fa-heart"></i> اضغطي هنا باستمرار
+                </button>
+                <div class="love-meter">
+                    <div class="meter-fill" id="loveMeter"></div>
+                    <span class="meter-text">مستوى حبي لكِ: <span id="lovePercent">100%</span></span>
+                </div>
+            </div>
+            
+            <div class="footer-note">
+                <p> Yuk Yuk صنع بكل الحب ❤️
+                    لا تنسي الضغط على زر الموسيقى
+                </p>
+            </div>
+        </div>
+        
+    </footer>
+    
+    <!-- رسالة عائمة -->
+    <div class="floating-message" id="floatingMessage">
+        <i class="fas fa-heart"></i> أحبكِ!
+    </div>
+    
+    <!-- الموسيقى -->
+    <audio id="backgroundMusic" loop>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
