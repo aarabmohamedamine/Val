@@ -10,6 +10,7 @@ let messageIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
+
 function typeEffect() {
     if (!typingText) return;
     

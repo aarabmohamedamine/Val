@@ -8,7 +8,7 @@ const CONFIG ={
         memories: [
         {
             image: "assets/images/1.jpeg",
-            title: "Our First Coffee",
+            memorytitle: "Our First Coffee",
             text: "Where everything started.",
             date :"03 مارس 2025 "
         },
