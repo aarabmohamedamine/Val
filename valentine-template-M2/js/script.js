@@ -241,12 +241,6 @@ if (nextBtn) {
     });
 }
 
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', function() {
-        currentSlide = index;
-        updateSlider();
-    });
-});
 
 // دالة لإنشاء قلوب متحركة
 function createHearts(count) {
