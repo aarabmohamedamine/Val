@@ -1719,3 +1719,9 @@ body {
         opacity: 0.35;
     }
 }
+@media (max-width: 576px) {
+    .floating-hearts,
+    .sparkles {
+        opacity: 0.15;
+    }
+}
