@@ -1614,3 +1614,108 @@ body {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+================================= */
+
+@media (max-width: 576px) {
+
+    /* NAVBAR */
+
+    .nav-bar {
+        padding: 10px 0;
+    }
+
+    .nav-container {
+        padding: 0 15px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.05rem;
+        gap: 6px;
+    }
+
+    .logo i {
+        font-size: 1.3rem;
+    }
+
+    .music-btn {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 1rem;
+    }
+
+    /* EXCLUSIVE MESSAGE */
+
+    .exclusive-message {
+        width: calc(100% - 30px);
+        max-width: 100%;
+        padding: 25px 18px;
+        margin: 85px auto 25px;
+        border-radius: 18px;
+    }
+
+    .exclusive-message h3 {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .exclusive-message p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    #loved-name {
+        font-size: 1.1rem;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+        min-height: auto;
+        padding: 45px 15px 60px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.35rem;
+        min-height: 45px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.9;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    /* DECORATIONS */
+
+    .floating-hearts,
+    .sparkles {
+        opacity: 0.35;
+    }
+}
