@@ -950,21 +950,6 @@ body {
     opacity: 0.8;
 }
 
-/* الرسالة العائمة */
-.floating-message {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background: var(--gradient);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: var(--shadow);
-    z-index: 1001;
-    display: none;
-    animation: floatMessage 3s ease-in-out;
-}
 
 @keyframes floatMessage {
     0% { transform: translateY(100px); opacity: 0; }
@@ -1089,15 +1074,6 @@ body {
     z-index: 10;
 }
 
-/* تحسين عرض الرسالة العائمة */
-#floatingMessage {
-    animation: floatMessage 3s ease-in-out;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* تحسين عرض الصفحة على الجوال */
 @media (max-width: 768px) {
     .envelope {
         padding: 25px;
