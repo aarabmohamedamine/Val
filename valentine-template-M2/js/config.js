@@ -2,28 +2,36 @@ const CONFIG ={
     Recipientname : "هناء",
 
     
+    mainPhoto: "assets/images/main_photo.jpeg",
+
+    signature : 'مع كل حبي <br> Amine',
+    Love_Letter:"Letter Body",
+
+    
+
+    
 
 
 
         memories: [
         {
-            image: "assets/images/1.jpeg",
-            memorytitle: "Our First Coffee",
-            text: "Where everything started.",
+            image: "assets/images/memory1.jpeg",
+            title: "أول لقاء",
+            text: "Description",
             date :"03 مارس 2025 "
         },
         
         {
-            image: "assets/images/2.jpeg",
-            title: "That Special Day",
-            text: "One of those days I'll never forget.",
+            image: "assets/images/memory1.jpeg",
+            title: "أول هدية من الفتاة التي أعشق",
+            text: "Description",
             date :"03 مارس 2025 "
         },
         
         {
-            image: "assets/images/3.jpeg",
+            image: "assets/images/memory1.jpeg",
             title: "Our Favorite Memory",
-            text: "A moment worth keeping forever.",
+            text: "Description",
             date :"03 مارس 2025 "
         }
     ],

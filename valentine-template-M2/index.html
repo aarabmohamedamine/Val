@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- أضف هذا بعد <header> -->
 <div class="exclusive-message">
     <div class="locjn">
         <i class="fas fa-lock"></i>
@@ -70,11 +69,11 @@
                         <div class="decoration-circle"></div>
                         <div class="decoration-circle"></div>
                     </div>
-                    <img src="assets/images/media1.jpeg" 
-                         alt="قلب من الورود" class="main-photo">
-                    <div class="photo-overlay">
-                        <p>text</p>
-                    </div>
+                    <img 
+                    class="main-photo" 
+                    id="mainPhoto"
+                    alt="قلب من الورود"
+                    >
                 </div>
             </div>
         </div>
@@ -110,16 +109,15 @@
                     
                     <div class="letter-body">
                         <p>عزيزتي،</p>
-                        <p>في هذا اليوم الجميل، أود أن أعبر لك عن امتناني لحبك ووجودك في حياتي. شكراً لك على كل شيء، على كل ابتسامة، على كل دعم، وعلى كل لحظة جميلة قضيناها معاً.</p>
-                        <p>أنتِ النور الذي يضيء حياتي، والسعادة التي تملأ أيامي، والحب الذي يجعل قلبي ينبض. معكِ تعلمت معنى الحب الحقيقي، ومعنى الاهتمام، ومعنى أن يكون هناك شخص يهتم بك حقاً.</p>
-                        <p>أتمنى أن نبقى معاً للأبد، نشارك اللحظات الجميلة، ونتخطى الصعاب معاً. كل عام وأنتِ أغلى هدية في حياتي.</p>
-                        <p>أحبكِ أكثر مما تستطيعين الكلمات التعبير عنه.</p>
+                        <p id="letterBody"></p>
+
                     </div>
                     
                     <div class="letter-footer">
-                        <div class="signature">مع كل حبي،<br>الحمق ديالك</div>
+                        <div class="signature" id="signature"></div>
                         <div class="seal">
                             <i class="fas fa-heart"></i>
+                            
                         </div>
                     </div>
                 </div>
@@ -141,54 +139,14 @@
         </div>
         
         <div class="memories-container">
-            <div class="memory-slider">
-                <div class="memory-card active">
-                    <div class="memory-image">
-                        <img src="assets/images/media2.jpeg" alt="ذكرى 1">
-                    </div>
-                    <div class="memory-content">
-                        <h3>أول لقاء</h3>
-                        <p>أول مقابلة دارت بيننا ، اليوم الذي تغيرت فيه حياتي للأبد.</p>
-                        <div class="memory-date">
-                            <i class="far fa-calendar"></i> 03 مارس 2025
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="memory-card">
-                    <div class="memory-image">
-                        <img src="assets/images/media3.jpeg" alt="ذكرى 2">
-                    </div>
-                    <div class="memory-content">
-                        <h3>أول هدية من الفتاة التي أعشق</h3>
-                        <p>أثمن ما حصلت عليه طوال حياتي</p>
-                        <div class="memory-date">
-                            <i class="far fa-calendar"></i> 23 ماي 2025
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="memory-card">
-                    <div class="memory-image">
-                        <img src="assets/images/media4.jpeg" alt="ذكرى 3">
-                    </div>
-                    <div class="memory-content">
-                        <h3>مشاعر</h3>
-                        <p>هنا أول كلمة أحبك ، وهنا بدأ كل الشيئ بالنسبة لنا❤️</p>
-                        <div class="memory-date">
-                            <i class="far fa-calendar"></i> الأول من شهر يوليو 2025
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="memory-slider"id="memorySlider"></div>
             
             <div class="slider-controls">
-                <button class="slider-btn prev-btn"><i class="fas fa-chevron-right"></i></button>
-                <div class="slider-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
+                <button class="slider-btn prev-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots"></div>
+
                 <button class="slider-btn next-btn"><i class="fas fa-chevron-left"></i></button>
             </div>
         </div>

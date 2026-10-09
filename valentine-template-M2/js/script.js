@@ -9,7 +9,11 @@ const messages = [
 let messageIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-
+const mainPhotoText = document.querySelector("#main-photo-text")
+mainPhotoText.textContent = CONFIG.mainPhototext
+const letterbody = document.querySelector("#letterBody")
+letterbody.textContent = CONFIG.Love_Letter
+document.getElementById('signature').innerHTML = CONFIG.signature
 
 function typeEffect() {
     if (!typingText) return;
@@ -357,7 +361,89 @@ document.addEventListener('click', function(e) {
     console.log("تم النقر على:", e.target.tagName, e.target.id || e.target.className);
 });
 
+function loadMemories() {
+    const slider = document.getElementById("memorySlider");
 
+    if (!slider) return;
+
+    slider.innerHTML = "";
+
+    CONFIG.memories.forEach((memory, index) => {
+        const card = document.createElement("div");
+
+        card.className = `memory-card ${index === 0 ? "active" : ""}`;
+
+        card.innerHTML = `
+            <div class="memory-image">
+                <img src="${memory.image}" alt="Memory ${index + 1}">
+            </div>
+
+            <div class="memory-content">
+                <h3>${memory.title}</h3>
+                <p>${memory.text}</p>
+
+                <div class="memory-date">
+                    <i class="far fa-calendar"></i>
+                    ${memory.date}
+                </div>
+            </div>
+        `;
+
+        slider.appendChild(card);
+    });
+}
+
+function initMemorySlider() {
+    const cards = document.querySelectorAll(".memory-card");
+    const dotsContainer = document.querySelector(".slider-dots");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    if (!cards.length || !dotsContainer || !prevBtn || !nextBtn) return;
+
+    let currentIndex = 0;
+
+    // Generate dots dynamically
+    dotsContainer.innerHTML = "";
+
+    cards.forEach((card, index) => {
+        const dot = document.createElement("span");
+        dot.classList.add("dot");
+
+        dot.addEventListener("click", () => {
+            showMemory(index);
+        });
+
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll(".dot");
+
+    function showMemory(index) {
+        cards[currentIndex].classList.remove("active");
+        dots[currentIndex].classList.remove("active");
+
+        currentIndex = (index + cards.length) % cards.length;
+
+        cards[currentIndex].classList.add("active");
+        dots[currentIndex].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", () => {
+        showMemory(currentIndex + 1);
+    });
+
+    prevBtn.addEventListener("click", () => {
+        showMemory(currentIndex - 1);
+    });
+
+    showMemory(0);
+}
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("mainPhoto").src = CONFIG.mainPhoto;
+    loadMemories();
+    initMemorySlider();
+});
 
 
 const recipientName = document.querySelector('#lovedName')
