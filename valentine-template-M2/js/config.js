@@ -11,7 +11,7 @@ const CONFIG ={
     mainPhoto: "assets/images/main.avif",
 
     signature : 'مع كل حبي <br> (الاسم)',
-    Love_Letter:"Letter Body",
+    Love_Letter:"Love_Letter: `حبيبتي الغالية ❤️، منذ أن دخلتِ حياتي، أصبحت للأيام نكهة مختلفة... في عيد الحب هذا، أردت أن أقدم لكِ شيئاً مختلفاً... كل عام وأنتِ أجمل صدفة وأحلى هدية في حياتي. ❤️`",
 
     startDate: "2026-02-14",
 
