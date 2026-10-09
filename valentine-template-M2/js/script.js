@@ -1,12 +1,6 @@
 // تفعيل تأثير الكتابة
 const typingText = document.getElementById('typingText');
-const messages = [
-    "أنتِ أجمل هدية في حياتي",
-    "كل يوم معكِ هو عيد حب",
-    "أنتِ سبب سعادتي",
-    "أحبكِ أكثر مما تتخيلين"
-];
-let messageIndex = 0;
+const messages = CONFIG.typingMessages;let messageIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 document.querySelectorAll(".lovedName").forEach(element => {
@@ -15,8 +9,35 @@ document.querySelectorAll(".lovedName").forEach(element => {
 const letterbody = document.querySelector("#letterBody")
 letterbody.textContent = CONFIG.Love_Letter
 document.getElementById('signature').innerHTML = CONFIG.signature
-const daysTogether = document.querySelector("#daysTogether")
-daysTogether.textContent = CONFIG.loveCounter
+const daysTogether = document.querySelector("#daysTogether");
+
+function calculateDaysTogether(startDate) {
+    const start = new Date(`${startDate}T00:00:00`);
+    const today = new Date();
+
+    const startUTC = Date.UTC(
+        start.getFullYear(),
+        start.getMonth(),
+        start.getDate()
+    );
+
+    const todayUTC = Date.UTC(
+        today.getFullYear(),
+        today.getMonth(),
+        today.getDate()
+    );
+
+    return Math.max(
+        0,
+        Math.floor((todayUTC - startUTC) / 86400000)
+    );
+}
+
+if (daysTogether) {
+    daysTogether.textContent = calculateDaysTogether(CONFIG.startDate);
+}
+
+
 function typeEffect() {
     if (!typingText) return;
     
@@ -42,23 +63,34 @@ function typeEffect() {
     }
 }
 
-const musicBtn = document.getElementById('musicBtn');
-const backgroundMusic = document.getElementById('backgroundMusic');
-let isPlaying = false;
+const musicBtn = document.getElementById("musicBtn");
+const backgroundMusic = document.getElementById("backgroundMusic");
 
 if (musicBtn && backgroundMusic) {
-    musicBtn.addEventListener('click', function() {
-        if (isPlaying) {
-            backgroundMusic.pause();
-            musicBtn.innerHTML = '<i class="fas fa-music"></i>';
+    backgroundMusic.src = CONFIG.song;
+
+    musicBtn.addEventListener("click", async () => {
+        if (backgroundMusic.paused) {
+            try {
+                await backgroundMusic.play();
+            } catch (error) {
+                console.error("Music playback failed:", error);
+            }
         } else {
-            backgroundMusic.play().catch(e => {
-                console.log("لم يتم تشغيل الموسيقى تلقائياً. يحتاج المستخدم إلى التفاعل أولاً.");
-            });
-            musicBtn.innerHTML = '<i class="fas fa-pause"></i>';
+            backgroundMusic.pause();
         }
-        isPlaying = !isPlaying;
     });
+
+    function updateMusicButton() {
+        musicBtn.innerHTML = backgroundMusic.paused
+            ? '<i class="fas fa-music"></i>'
+            : '<i class="fas fa-pause"></i>';
+    }
+
+    backgroundMusic.addEventListener("play", updateMusicButton);
+    backgroundMusic.addEventListener("pause", updateMusicButton);
+
+    updateMusicButton();
 }
 
 const envelope = document.getElementById('envelope');
@@ -350,10 +382,6 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("زر المفاجأة:", surpriseBtn);
 });
 
-// إضافة console.log للتحقق من النقرات
-document.addEventListener('click', function(e) {
-    console.log("تم النقر على:", e.target.tagName, e.target.id || e.target.className);
-});
 
 function loadMemories() {
     const slider = document.getElementById("memorySlider");
@@ -385,6 +413,18 @@ function loadMemories() {
 
         slider.appendChild(card);
     });
+}
+function initializeTemplate() {
+    const mainPhoto = document.getElementById("mainPhoto");
+
+    if (mainPhoto) {
+        mainPhoto.src = CONFIG.mainPhoto;
+    }
+
+    loadMemories();
+    initMemorySlider();
+    loadGift();
+    loadTexts();
 }
 
 function initMemorySlider() {
@@ -433,10 +473,29 @@ function initMemorySlider() {
 
     showMemory(0);
 }
+
+function loadGift() {
+    document.getElementById("giftTitle").textContent =
+        CONFIG.gift.title;
+
+    document.getElementById("giftMessage1").textContent =
+        CONFIG.gift.message1;
+
+    document.getElementById("giftMessage2").textContent =
+        CONFIG.gift.message2;
+
+    document.getElementById("giftFinalMessage").textContent =
+        CONFIG.gift.finalMessage;
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("mainPhoto").src = CONFIG.mainPhoto;
+    initializeTemplate()
     loadMemories();
     initMemorySlider();
+    loadGift();
+    
 });
 
 

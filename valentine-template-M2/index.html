@@ -17,7 +17,7 @@
             <i class="fas fa-lock"></i>
         </div>
         <h3>🎀هدية ليك بوحدك🎀</h3>
-        <p> حبيبتي <span class="lovedName" id="loved"></span>،</p>
+        <p> حبيبتي <span class="lovedName" id="loved-name"></span>،</p>
         <p>هذه الصفحة اعددتها خصيصا لك كهدية ، وكل كلمة فيها موجهة اليك</p>
         
     </div>
@@ -101,7 +101,7 @@
                 
                 <div class="letter" id="letterContent">
                     <div class="letter-header">
-                        <div class="letter-date">14 فبراير 2026</div>
+                        <div class="letter-date">14 فبراير 2027</div>
                         <div class="letter-title">رسالتي الخاصة</div>
                     </div>
                     
@@ -192,21 +192,28 @@
                 <div class="box-bottom"></div>
             </div>
             
-            <div class="gift-message-card" id="giftMessage">
-                <h3><i class="fas fa-star"></i> هديتي لكِ</h3>
-                <p>هديتي لكِ هي وعد بالحب الأبدي، والالتزام بالسعادة الدائمة، والعزم على جعل كل يوم من أيامنا معاً أجمل من الذي سبقه.</p>
-                <p>أعدكِ بأن أكون دائماً جانبكِ، أدعمكِ في أحلامكِ، وأشارككِ كل لحظات الفرح والحزن.</p>
-                <div class="virtual-gift">
-                    <i class="fas fa-heart-circle-check"></i>
-                    <p>احبك من من كل أعماق قلبي الخايبة ديالي ❤️</p>
-                </div>
-                <button class="btn-primary" id="closeGiftBtn">
-                    <i class="fas fa-heart"></i>شكرا يا مولاي
-                </button>
+        <div class="gift-message-card" id="giftMessage">
+
+            <h3>
+                <i class="fas fa-star"></i>
+                <span id="giftTitle"></span>
+            </h3>
+
+            <p id="giftMessage1"></p>
+
+            <p id="giftMessage2"></p>
+
+            <div class="virtual-gift">
+                <i class="fas fa-heart-circle-check"></i>
+                <p id="giftFinalMessage"></p>
             </div>
-        </div>
-    </section>
-    
+
+            <button class="btn-primary" id="closeGiftBtn">
+                <i class="fas fa-heart"></i>
+                أحبكِ
+            </button>
+
+        </div>    
     <!-- نهاية الصفحة -->
     <footer class="footer">
         <div class="footer-content">
@@ -241,10 +248,8 @@
     </div>
     
     <!-- الموسيقى -->
-    <audio id="backgroundMusic" loop>
-        <source src="assets/song/song.mp3" type="audio/mpeg">
-    </audio>
-    
+<audio id="backgroundMusic" loop></audio>
+
     <script src="js/config.js"></script>
     <script src="js/script.js"></script>
 </body>
