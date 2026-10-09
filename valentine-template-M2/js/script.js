@@ -9,12 +9,14 @@ const messages = [
 let messageIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-const mainPhotoText = document.querySelector("#main-photo-text")
-mainPhotoText.textContent = CONFIG.mainPhototext
+document.querySelectorAll(".lovedName").forEach(element => {
+    element.textContent = CONFIG.Recipientname;
+});
 const letterbody = document.querySelector("#letterBody")
 letterbody.textContent = CONFIG.Love_Letter
 document.getElementById('signature').innerHTML = CONFIG.signature
-
+const daysTogether = document.querySelector("#daysTogether")
+daysTogether.textContent = CONFIG.loveCounter
 function typeEffect() {
     if (!typingText) return;
     
@@ -40,7 +42,6 @@ function typeEffect() {
     }
 }
 
-// تشغيل الموسيقى
 const musicBtn = document.getElementById('musicBtn');
 const backgroundMusic = document.getElementById('backgroundMusic');
 let isPlaying = false;
@@ -60,7 +61,6 @@ if (musicBtn && backgroundMusic) {
     });
 }
 
-// فتح وإغلاق الرسالة - الإصلاح الرئيسي هنا
 const envelope = document.getElementById('envelope');
 const letterContent = document.getElementById('letterContent');
 let letterOpen = false;
@@ -446,6 +446,3 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const recipientName = document.querySelector('#lovedName')
-
-recipientName.textContent = CONFIG.Recipientname

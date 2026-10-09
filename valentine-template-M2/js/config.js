@@ -1,11 +1,14 @@
 const CONFIG ={
-    Recipientname : "هناء",
+    Recipientname : "(الاسم)",
+    song :"assets/song/",
 
     
-    mainPhoto: "assets/images/main_photo.jpeg",
+    mainPhoto: "assets/images/main.avif",
 
     signature : 'مع كل حبي <br> Amine',
     Love_Letter:"Letter Body",
+
+    loveCounter : 'XXX',
 
     
 
@@ -15,28 +18,28 @@ const CONFIG ={
 
         memories: [
         {
-            image: "assets/images/memory1.jpeg",
-            title: "أول لقاء",
-            text: "Description",
-            date :"03 مارس 2025 "
+            image: "assets/images/memory_00.png",
+            title: "العنوان",
+            text: "وصف",
+            date :"التاريخ"
         },
         
         {
-            image: "assets/images/memory1.jpeg",
-            title: "أول هدية من الفتاة التي أعشق",
-            text: "Description",
-            date :"03 مارس 2025 "
+            image: "assets/images/memory_00.png",
+            title: "العنوان",
+            text: "وصف",
+            date :"التاريخ"
         },
         
         {
-            image: "assets/images/memory1.jpeg",
-            title: "Our Favorite Memory",
-            text: "Description",
-            date :"03 مارس 2025 "
+            image: "assets/images/memory_00.png",
+            title: "العنوان",
+            text: "وصف",
+            date :"التاريخ"
         }
     ],
 
-
+    
     
 
 
