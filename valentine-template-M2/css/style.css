@@ -1701,3 +1701,54 @@ body {
         opacity: 0.15;
     }
 }
+
+@media (max-width: 576px) {
+
+    /* Letter container */
+    .letter-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Envelope */
+    .envelope {
+        padding: 15px;
+    }
+
+    /* Recipient label */
+    .to-label {
+        max-width: 100%;
+    }
+
+    .to-label p {
+        font-size: 1rem;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
+    }
+
+    /* Letter content */
+    .letter {
+        padding: 20px 15px;
+    }
+
+    .letter-header {
+        gap: 10px;
+    }
+
+    .letter-title {
+        font-size: 1.35rem;
+        line-height: 1.5;
+    }
+
+    .letter-date {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    /* Signature */
+    .signature {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        overflow-wrap: anywhere;
+    }
+}
